@@ -7,7 +7,7 @@ const Hero = () => {
     <Container fluid className = "hero-container">
       <Row>
         <Col style = {{ marginTop: "auto", marginBottom: "auto"}}>
-        <h1>Experience Life</h1>
+        <h1>Experience <strong>Life</strong></h1>
         <h3>Like <strong>never</strong> before</h3>
         <Button style = {{ marginTop: "20px" }} varient="primary">Find Out How</Button>
         </Col>

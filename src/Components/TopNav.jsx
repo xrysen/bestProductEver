@@ -11,8 +11,8 @@ const TopNav = () => {
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#About">About</Nav.Link>
           <Nav.Link href="#perks">Perks</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
           <Nav.Link href="#reviews">Reviews</Nav.Link>
+          <Nav.Link href="#pricing">Pricing</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
