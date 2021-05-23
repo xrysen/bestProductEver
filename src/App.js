@@ -4,6 +4,7 @@ import Announcement from "./Components/Announcement";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Perks from "./Components/Perks";
+import Reviews from "./Components/Reviews";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <About />
       <Perks />
+      <Reviews />
     </div>
   );
 }
