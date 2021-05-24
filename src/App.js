@@ -15,6 +15,7 @@ function App() {
       <Hero />
       <About />
       <Perks />
+      <Reviews />
     </div>
   );
 }

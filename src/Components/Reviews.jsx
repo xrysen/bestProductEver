@@ -4,8 +4,11 @@ import pic2 from "../Assets/pic2.png";
 
 const Reviews = () => {
   return (
-    <Container className="reviews-container">
+    <Container fluid className="reviews-container">
       <Row>
+        <Col>
+        <img src = {pic2} alt = "Thinking" />
+        </Col>
         <Col>
           <CardGroup className="review-cards">
             <Card>
