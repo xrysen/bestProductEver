@@ -1,21 +1,31 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWeightHanging, faPalette, faCog, faFileContract } from "@fortawesome/free-solid-svg-icons"
 import "./Perks.css";
 
 const Perks = () => {
   return (
     <Container fluid className="perks-container">
       <Row>
-        <Col style = {{marginTop: "20px"}}>
-          <h1>Introducing the Best Product Ever™</h1>
+        <Col style = {{ marginTop: "200px"}}>
+          <FontAwesomeIcon icon = {faWeightHanging} size="5x"/>
+          <h5>Light Weight</h5>
+          <p>Take it wherever you need to go</p>
         </Col>
-      </Row>
-      <Row>
-        <Col>
-        <img
-          style = {{ borderRadius: "10px"}}
-          src="https://images.unsplash.com/photo-1495837174058-628aafc7d610?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-          alt="Party"
-        />
+        <Col style = {{ marginTop: "200px"}}>
+          <FontAwesomeIcon icon = {faPalette} size = "5x" />
+          <h5>Colour Choice</h5>
+          <p>Comes in a variety of colours!</p>
+        </Col>
+        <Col style = {{ marginTop: "200px"}}>
+          <FontAwesomeIcon icon = {faCog} size = "5x" />
+          <h5>Adjustable</h5>
+          <p>Choose how you want to use it!</p>
+        </Col>
+        <Col style = {{ marginTop: "200px"}}>
+          <FontAwesomeIcon icon = {faFileContract} size = "5x" />
+          <h5>100% Money Back</h5>
+          <p>If you're not satisifed we'll refund you! Guarunteed!</p>
         </Col>
       </Row>
     </Container>

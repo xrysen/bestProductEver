@@ -4,17 +4,14 @@ import pic2 from "../Assets/pic2.png";
 
 const Reviews = () => {
   return (
-    <Container fluid className="reviews-container">
+    <Container className="reviews-container">
       <Row>
-        <Col>
-          <img src = {pic2} alt = "Thinking" width = "500" />
-        </Col>
         <Col>
           <CardGroup className="review-cards">
             <Card>
               <Card.Header>*****</Card.Header>
               <blockquote className="blockquote mb-0">
-                <p>This seriously changed my life.</p>
+                <p>"This seriously changed my life."</p>
                 <footer className="blockquote-footer">
                   Jake from New York
                 </footer>
