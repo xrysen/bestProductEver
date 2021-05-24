@@ -1,7 +1,12 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const TopNav = () => {
+  const { user, isAuthenticated } = useAuth0();
+
   return (
     <Navbar style = {{ backgroundColor: "white"}} expand = "lg">
       <Navbar.Brand href="#home">BestCo</Navbar.Brand>
@@ -14,6 +19,8 @@ const TopNav = () => {
           <Nav.Link href="#reviews">Reviews</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
         </Nav>
+        {isAuthenticated ? <p>Hey, {user.name}</p>  : <LoginButton />  }
+        {isAuthenticated ? <LogoutButton /> : "" }
       </Navbar.Collapse>
     </Navbar>
   )

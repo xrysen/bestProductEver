@@ -7,6 +7,7 @@ import Perks from "./Components/Perks";
 import Reviews from "./Components/Reviews";
 import Pricing from "./Components/Pricing";
 import Footer from "./Components/Footer";
+import LoginButton from "./Components/LoginButton";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
