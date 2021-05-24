@@ -7,7 +7,7 @@ const Reviews = () => {
     <Container fluid className="reviews-container">
       <Row>
         <Col>
-        <img src = {pic2} alt = "Thinking" />
+        <img src = {pic2} alt = "Thinking" style = {{ width: "100%"}} />
         </Col>
         <Col>
           <CardGroup className="review-cards">

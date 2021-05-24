@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Pricing.css";
 
 const Pricing = () => {
@@ -36,6 +36,9 @@ const Pricing = () => {
           <li>Fix Global Warming</li>
         </ul>
         </Col>
+      </Row>
+      <Row style = {{ justifyContent: "center"}}>
+        <Button>Buy Now!</Button>
       </Row>
     </Container>
   )
