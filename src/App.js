@@ -5,6 +5,7 @@ import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Perks from "./Components/Perks";
 import Reviews from "./Components/Reviews";
+import Pricing from "./Components/Pricing";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Perks />
       <Reviews />
+      <Pricing />
     </div>
   );
 }
