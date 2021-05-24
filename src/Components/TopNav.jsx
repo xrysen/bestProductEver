@@ -19,7 +19,7 @@ const TopNav = () => {
           <Nav.Link href="#reviews">Reviews</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
         </Nav>
-        {isAuthenticated ? <p>Hey, {user.name}</p>  : <LoginButton />  }
+        {isAuthenticated ? <Nav.Link>Hey, {user.name}</Nav.Link>  : <LoginButton />  }
         {isAuthenticated ? <LogoutButton /> : "" }
       </Navbar.Collapse>
     </Navbar>
