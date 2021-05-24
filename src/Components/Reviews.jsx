@@ -1,4 +1,4 @@
-import { Button, Card, CardGroup, Col, Container, Row } from "react-bootstrap";
+import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
 import "./Reviews.css";
 import pic2 from "../Assets/pic2.png";
 
