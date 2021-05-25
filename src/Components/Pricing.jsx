@@ -3,7 +3,7 @@ import "./Pricing.css";
 
 const Pricing = (props) => {
   return (
-    <Container fluid className = "pricing-container">
+    <Container id = "pricing" fluid className = "pricing-container">
       <Row>
         <Col style = {{ marginTop: "100px"}}>
         <h2 style = {{ color: "#C5EBC3"}}>Standard</h2>

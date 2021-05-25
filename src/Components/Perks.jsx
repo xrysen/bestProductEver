@@ -5,7 +5,7 @@ import "./Perks.css";
 
 const Perks = () => {
   return (
-    <Container fluid className="perks-container">
+    <Container id = "perks" fluid className="perks-container">
       <Row>
         <Col style = {{ marginTop: "200px"}}>
           <FontAwesomeIcon icon = {faWeightHanging} size="5x"/>

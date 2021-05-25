@@ -4,7 +4,7 @@ import pic2 from "../Assets/pic2.png";
 
 const Reviews = () => {
   return (
-    <Container fluid className="reviews-container">
+    <Container id = "reviews" fluid className="reviews-container">
       <Row>
         <Col>
         <img src = {pic2} alt = "Thinking" style = {{ width: "100%"}} />

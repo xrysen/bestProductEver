@@ -4,7 +4,7 @@ import pic1 from "../Assets/pic1.png";
 
 const Hero = () => {
   return (
-    <Container fluid className = "hero-container">
+    <Container id = "home" fluid className = "hero-container">
       <Row>
         <Col style = {{ marginTop: "auto", marginBottom: "auto"}}>
         <h1>Experience <strong>Life</strong></h1>

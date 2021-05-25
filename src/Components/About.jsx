@@ -3,8 +3,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div id="about">
-      <Container fluid className="about-container">
+      <Container id = "about" fluid className="about-container">
         <Row>
           <Col>
             <img
@@ -25,7 +24,6 @@ const About = () => {
           </Col>
         </Row>
       </Container>
-    </div>
   );
 };
 
