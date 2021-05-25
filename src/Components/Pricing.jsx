@@ -1,7 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Pricing.css";
 
-const Pricing = () => {
+const Pricing = (props) => {
   return (
     <Container fluid className = "pricing-container">
       <Row>
@@ -38,7 +38,7 @@ const Pricing = () => {
         </Col>
       </Row>
       <Row style = {{ justifyContent: "center"}}>
-        <Button>Buy Now!</Button>
+        <Button onClick = {props.view}>Buy Now!</Button>
       </Row>
     </Container>
   )
