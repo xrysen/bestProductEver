@@ -1,6 +1,10 @@
-import { CardElement, useStripe, useElements, CardNumberElement } from "@stripe/react-stripe-js";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { Form } from "react-bootstrap";
 import "./Checkoutform.css";
+
+const CARD_OPTIONS = {
+  iconStyle: "solid"
+}
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -29,7 +33,7 @@ const CheckoutForm = () => {
 
   return (
     <Form className = "checkout-form" onSubmit = {handleSubmit}>
-      <CardElement />
+      <CardElement options = {CARD_OPTIONS} />
       <button type = "submit" disabled = {!stripe}>
         Pay Now
       </button>

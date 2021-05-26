@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Announcement />
-      <TopNav />
+      <TopNav setView = {() => changeView("Landing")} />
       {view === "Landing" && (
         <>
           <Hero />
