@@ -8,6 +8,7 @@ import Reviews from "./Components/Reviews";
 import Pricing from "./Components/Pricing";
 import Footer from "./Components/Footer";
 import Checkout from "./Components/Checkout";
+import Summary from "./Components/Summary";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
@@ -28,11 +29,14 @@ function App() {
           <About />
           <Perks />
           <Reviews />
-          <Pricing view = {()=> changeView("checkout")} />
+          <Pricing view = {()=> changeView("summary")} />
         </>
       )}
       {view === "checkout" && (
         <Checkout />
+      )}
+      {view === "summary" && (
+        <Summary />
       )}
       <Footer />
     </div>
