@@ -1,5 +1,6 @@
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
+
 
 const packages = [
   {
@@ -45,6 +46,11 @@ const Summary = () => {
     console.log(formValues);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formValues);
+  }
+
   return (
     <Container>
       <Row style={{ justifyContent: "center" }}>
@@ -67,7 +73,7 @@ const Summary = () => {
         })}
       </Row>
       <Row style={{ justifyContent: "center" }}>
-        <Form>
+        <Form onSubmit = {handleSubmit}>
           <Form.Row>
             <Form.Group as={Col} controlId="formName">
               <Form.Control
@@ -151,6 +157,7 @@ const Summary = () => {
               />
             </Form.Group>
           </Form.Row>
+          <Button type = "submit">Submit</Button>
         </Form>
       </Row>
     </Container>
