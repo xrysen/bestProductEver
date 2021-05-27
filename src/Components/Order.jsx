@@ -2,6 +2,7 @@ import OrderForm from "./OrderForm";
 import { useState } from "react";
 import { ShippingContext } from "../Contexts/ShippingContext";
 import { Container } from "react-bootstrap";
+import Checkout from "./Checkout";
 
 
 const Order = () => {
@@ -26,7 +27,10 @@ const Order = () => {
     <Container>
       <ShippingContext.Provider value = {{formValues, setFormValues, radioValue, setRadioValue}}>
       {view === "form" && (
-        <OrderForm viewChange = {()=> changeView("summary")} />
+        <OrderForm viewChange = {()=> changeView("checkout")} />
+      )}
+      {view === "checkout" && (
+        <Checkout price = {radioValue.price} product = {radioValue.name} />
       )}
       {view === "summary" && (
         <h1>Thanks {formValues.firstName}!</h1>

@@ -48,7 +48,7 @@ const OrderForm = (props) => {
       <Row style={{ justifyContent: "center" }}>
         <h1>Choose Your Package</h1>
       </Row>
-      <Row>
+      <Row style = {{ marginBottom: "50px"}}>
         {packages.map((item) => {
           return (
             <Col key = {item.id}>
@@ -58,7 +58,7 @@ const OrderForm = (props) => {
                 type="radio"
                 name="package"
                 value={item.id}
-                onChange={()=> setRadioValue(item.id)}
+                onChange={()=> setRadioValue(item)}
               />
             </Col>
           );
