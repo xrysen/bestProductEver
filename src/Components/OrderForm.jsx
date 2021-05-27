@@ -20,7 +20,7 @@ const packages = [
   },
 ];
 
-const Summary = () => {
+const OrderForm = () => {
   const [radioValue, setRadioValue] = useState(0);
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -59,7 +59,7 @@ const Summary = () => {
       <Row>
         {packages.map((item) => {
           return (
-            <Col>
+            <Col key = {item.id}>
               <h3>{item.name}</h3>
               <h1>${item.price}</h1>
               <input
@@ -164,4 +164,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default OrderForm;
