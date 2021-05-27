@@ -1,13 +1,19 @@
 # The Best Product Ever
 
 ## About
-A simple Ecom site for one product written created with React, React Bootstrap, Auth0 for login and Stripe for payment processing.
+A simple Ecom site for one product created with React, React Bootstrap, Auth0 for login and Stripe for payment processing.
 
 ## Screenshots
 <img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss1.png?raw=true">
 <img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss2.png?raw=true">
 <img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss3.png?raw=true">
 <img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss4.png?raw=true">
+
+## Setup
+- Clone repository
+- Run npm install
+- Create a .env file and using example.env as a guide
+- You'll need both an Auth0 and Stripe account to get the keys required in the .env file
 
 ## Dependencies 
 - @auth0/auth0-react: ^1.5.0,
