@@ -1,33 +1,28 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { ShippingContext } from "../Contexts/ShippingContext"
 
 
 const packages = [
   {
-    id: 0,
+    id: 1,
     name: "Standard",
     price: 59.99,
   },
   {
-    id: 1,
+    id: 2,
     name: "Deluxe",
     price: 99.99,
   },
   {
-    id: 2,
+    id: 3,
     name: "Ultra-Deluxe",
     price: 159.99,
   },
 ];
 
 const OrderForm = (props) => {
-  const [radioValue, setRadioValue] = useState(0);
-  const {formValues, setFormValues} = useContext(ShippingContext);
-
-  const handleRadio = (e) => {
-    setRadioValue(e.target.value);
-  };
+  const {formValues, setFormValues, radioValue, setRadioValue} = useContext(ShippingContext);
 
   const handleChange = (e) => {
     setFormValues((prevState) => ({
@@ -40,7 +35,12 @@ const OrderForm = (props) => {
     e.preventDefault();
     console.log(packages[radioValue]);
     console.log(formValues);
-    props.viewChange();
+    if (!radioValue) {
+      alert("Please pick a package!")
+    } else {
+
+      props.viewChange();
+    }
   }
 
   return (
@@ -58,7 +58,7 @@ const OrderForm = (props) => {
                 type="radio"
                 name="package"
                 value={item.id}
-                onChange={(e) => handleRadio(e)}
+                onChange={()=> setRadioValue(item.id)}
               />
             </Col>
           );
@@ -69,6 +69,7 @@ const OrderForm = (props) => {
           <Form.Row>
             <Form.Group as={Col} controlId="formName">
               <Form.Control
+                required
                 type="text"
                 placeholder="First Name"
                 value={formValues.firstName}
@@ -79,6 +80,7 @@ const OrderForm = (props) => {
 
             <Form.Group as={Col} controlId="formLastName">
               <Form.Control
+                required
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
@@ -91,6 +93,7 @@ const OrderForm = (props) => {
           <Form.Row>
             <Form.Group as={Col} controlId="formAddress">
               <Form.Control
+                required
                 type="text"
                 name="address1"
                 placeholder="Street Number/Name"
@@ -114,6 +117,7 @@ const OrderForm = (props) => {
           <Form.Row>
             <Form.Group as={Col} controlId="formCity">
               <Form.Control
+                required
                 name="city"
                 type="text"
                 placeholder="City"
@@ -123,6 +127,7 @@ const OrderForm = (props) => {
             </Form.Group>
             <Form.Group>
               <Form.Control
+                required
                 type="text"
                 name="state"
                 placeholder="State/Province"
@@ -132,6 +137,7 @@ const OrderForm = (props) => {
             </Form.Group>
             <Form.Group>
               <Form.Control
+                required
                 type="text"
                 name="postalCode"
                 placeholder="Zip/Postal Code"
@@ -141,6 +147,7 @@ const OrderForm = (props) => {
             </Form.Group>
             <Form.Group>
               <Form.Control
+                required
                 type="text"
                 placeholder="Country"
                 name="country"

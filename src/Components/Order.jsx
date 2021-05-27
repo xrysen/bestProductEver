@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 
 const Order = () => {
   const [view, setView] = useState("form");
+  const [radioValue, setRadioValue] = useState(0);
   const [formValues, setFormValues] = useState( {
     firstName: "",
     lastName: "",
@@ -23,7 +24,7 @@ const Order = () => {
 
   return (
     <Container>
-      <ShippingContext.Provider value = {{formValues, setFormValues}}>
+      <ShippingContext.Provider value = {{formValues, setFormValues, radioValue, setRadioValue}}>
       {view === "form" && (
         <OrderForm viewChange = {()=> changeView("summary")} />
       )}
