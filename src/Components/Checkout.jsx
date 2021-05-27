@@ -14,7 +14,7 @@ const Checkout = (props) => {
           <Card>
             <Card.Body>
               <Elements stripe={stripePromise}>
-                <Checkoutform />
+                <Checkoutform user = {props.user} />
               </Elements>
             </Card.Body>
           </Card>

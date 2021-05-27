@@ -20,7 +20,7 @@ const About = () => {
             <h3>
               On more than just a <strong>promise</strong>
             </h3>
-            <Button style = {{ marginTop: "20px"}} variant = "primary">See Why</Button>
+            <Button href="#perks" style = {{ marginTop: "20px"}} variant = "primary">See Why</Button>
           </Col>
         </Row>
       </Container>

@@ -19,7 +19,7 @@ const TopNav = (props) => {
 
   return (
     <Navbar style = {{ backgroundColor: "white"}} expand = "lg">
-      <Navbar.Brand href="#home">BestCo</Navbar.Brand>
+      <Navbar.Brand href="#home" onClick={props.setView}>BestCo</Navbar.Brand>
       <Navbar.Toggle aria-controls = "basic-navbar-nav" />
       <Navbar.Collapse id = "basic-navbar-nav">
         <Nav className = "mr-auto">

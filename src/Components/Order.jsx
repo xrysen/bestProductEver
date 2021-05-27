@@ -30,10 +30,7 @@ const Order = () => {
         <OrderForm viewChange = {()=> changeView("checkout")} />
       )}
       {view === "checkout" && (
-        <Checkout price = {radioValue.price} product = {radioValue.name} />
-      )}
-      {view === "summary" && (
-        <h1>Thanks {formValues.firstName}!</h1>
+        <Checkout price = {radioValue.price} product = {radioValue.name} user = {formValues} />
       )}
       </ShippingContext.Provider>
     </Container>
