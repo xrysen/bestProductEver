@@ -45,7 +45,7 @@ const CheckoutForm = () => {
         >
           <h3>Credit Card Information</h3>
           <CardElement options={CARD_OPTIONS} />
-          <Button type="submit" disabled={!stripe}>
+          <Button type="submit" style={{marginTop: "30px"}} disabled={!stripe}>
             Pay Now
           </Button>
         </Form>
