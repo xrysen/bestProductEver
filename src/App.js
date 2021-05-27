@@ -7,7 +7,7 @@ import Perks from "./Components/Perks";
 import Reviews from "./Components/Reviews";
 import Pricing from "./Components/Pricing";
 import Footer from "./Components/Footer";
-import OrderForm from "./Components/OrderForm";
+import Order from "./Components/Order";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
@@ -32,7 +32,7 @@ function App() {
         </>
       )}
       {view === "orderForm" && (
-        <OrderForm />
+        <Order />
       )}
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ShippingContext } from "../Contexts/ShippingContext"
 
 
 const packages = [
@@ -20,22 +21,12 @@ const packages = [
   },
 ];
 
-const OrderForm = () => {
+const OrderForm = (props) => {
   const [radioValue, setRadioValue] = useState(0);
-  const [formValues, setFormValues] = useState({
-    firstName: "",
-    lastName: "",
-    address1: "",
-    address2: "",
-    city: "",
-    state: "",
-    country: "",
-    postalCode: "",
-  });
+  const {formValues, setFormValues} = useContext(ShippingContext);
 
   const handleRadio = (e) => {
     setRadioValue(e.target.value);
-    console.log(radioValue);
   };
 
   const handleChange = (e) => {
@@ -43,12 +34,13 @@ const OrderForm = () => {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
-    console.log(formValues);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(packages[radioValue]);
     console.log(formValues);
+    props.viewChange();
   }
 
   return (
