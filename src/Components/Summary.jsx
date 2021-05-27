@@ -29,12 +29,20 @@ const Summary = () => {
     city: "",
     state: "",
     country: "",
-    postalCode: ""
-  })
+    postalCode: "",
+  });
 
   const handleRadio = (e) => {
     setRadioValue(e.target.value);
     console.log(radioValue);
+  };
+
+  const handleChange = (e) => {
+    setFormValues((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+    console.log(formValues);
   };
 
   return (
@@ -62,37 +70,85 @@ const Summary = () => {
         <Form>
           <Form.Row>
             <Form.Group as={Col} controlId="formName">
-              <Form.Control type="text" placeholder="First Name" value={formValues.firstName} />
+              <Form.Control
+                type="text"
+                placeholder="First Name"
+                value={formValues.firstName}
+                name="firstName"
+                onChange={handleChange}
+              />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formLastName">
-              <Form.Control type="text" placeholder="Last Name" value={formValues.lastName}/>
+              <Form.Control
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formValues.lastName}
+                onChange={handleChange}
+              />
             </Form.Group>
           </Form.Row>
 
           <Form.Row>
             <Form.Group as={Col} controlId="formAddress">
-              <Form.Control type="text" placeholder="Street Number/Name" value={formValues.address1}/>
+              <Form.Control
+                type="text"
+                name="address1"
+                placeholder="Street Number/Name"
+                value={formValues.address1}
+                onChange={handleChange}
+              />
             </Form.Group>
           </Form.Row>
           <Form.Row>
             <Form.Group as={Col} controlId="formAddress2">
-              <Form.Control type="text" placeholder="Apt/Suite/Unit #" value={formValues.address2}/>
+              <Form.Control
+                type="text"
+                name="address2"
+                placeholder="Apt/Suite/Unit #"
+                value={formValues.address2}
+                onChange={handleChange}
+              />
             </Form.Group>
           </Form.Row>
 
           <Form.Row>
             <Form.Group as={Col} controlId="formCity">
-              <Form.Control type = "text" placeholder="City" value={formValues.city}/>
+              <Form.Control
+                name="city"
+                type="text"
+                placeholder="City"
+                value={formValues.city}
+                onChange={handleChange}
+              />
             </Form.Group>
             <Form.Group>
-              <Form.Control type = "text" placeholder="State/Province" value={formValues.state}/>
+              <Form.Control
+                type="text"
+                name="state"
+                placeholder="State/Province"
+                value={formValues.state}
+                onChange={handleChange}
+              />
             </Form.Group>
             <Form.Group>
-              <Form.Control type = 'text' placeholder = "Zip/Postal Code" value={formValues.postalCode}/>
+              <Form.Control
+                type="text"
+                name="postalCode"
+                placeholder="Zip/Postal Code"
+                value={formValues.postalCode}
+                onChange={handleChange}
+              />
             </Form.Group>
             <Form.Group>
-              <Form.Control type = "text" placeholder = "Country" value={formValues.country} />
+              <Form.Control
+                type="text"
+                placeholder="Country"
+                name="country"
+                value={formValues.country}
+                onChange={handleChange}
+              />
             </Form.Group>
           </Form.Row>
         </Form>
