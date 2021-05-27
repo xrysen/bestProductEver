@@ -8,33 +8,42 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const Checkout = (props) => {
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <Col>
-          <Elements stripe={stripePromise}>
-            <Checkoutform />
-          </Elements>
+          <Card>
+            <Card.Body>
+              <Elements stripe={stripePromise}>
+                <Checkoutform />
+              </Elements>
+            </Card.Body>
+          </Card>
         </Col>
         <Col>
           <Card>
             <Card.Body>
               <Card.Title>Order Summary</Card.Title>
-              <div className = "summary">
+              <div className="summary">
                 <h3>Product</h3>
                 <h3>Price</h3>
               </div>
-              <div className = "summary">
+              <div className="summary">
                 <p>{props.product}</p>
                 <p>${props.price}</p>
               </div>
-              <div className = "summary">
+              <div className="summary">
                 <p>Shipping</p>
-                <p><strike>$12.99</strike><strong>FREE</strong></p>
+                <p>
+                  <strike>$12.99</strike>
+                  <strong>FREE</strong>
+                </p>
               </div>
               <hr />
-              <div className = "summary">
+              <div className="summary">
                 <p>Total:</p>
-                <p><strong>${props.price}</strong></p>
+                <p>
+                  <strong>${props.price}</strong>
+                </p>
               </div>
             </Card.Body>
           </Card>
