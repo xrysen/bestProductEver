@@ -4,8 +4,12 @@
 A simple Ecom site for one product written created with React, React Bootstrap, Auth0 for login and Stripe for payment processing.
 
 ## Screenshots
+<img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss1.png?raw=true">
+<img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss2.png?raw=true">
+<img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss3.png?raw=true">
+<img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss4.png?raw=true">
 
-## Dependancies 
+## Dependencies 
 - @auth0/auth0-react: ^1.5.0,
 - @fortawesome/fontawesome-svg-core: ^1.2.35,
 - @fortawesome/free-solid-svg-icons: ^5.15.3,
