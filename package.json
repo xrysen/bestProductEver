@@ -1,5 +1,6 @@
 {
   "name": "best-product-ever",
+  "homepage" : "http://xrysen.github.io/bestProductEver",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
