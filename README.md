@@ -3,6 +3,8 @@
 ## About
 A simple Ecom site for one product created with React, React Bootstrap, Auth0 for login and Stripe for payment processing.
 
+It is deployed here: <a href = "https://xrysen.github.io/bestProductEver/">https://xrysen.github.io/bestProductEver/</a>
+
 ## Screenshots
 <img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss1.png?raw=true">
 <img src = "https://github.com/xrysen/bestProductEver/blob/main/docs/ss2.png?raw=true">
