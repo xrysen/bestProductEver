@@ -7,16 +7,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 const TopNav = (props) => {
   const { user, isAuthenticated } = useAuth0();
 
-  const getFirstname = (name) => {
-    let result = "";
-    let i = 0;
-    while(name[i] !== " ") {
-      result += name[i];
-      i++;
-    }
-    return result;
-  }
-
   return (
     <Navbar style = {{ backgroundColor: "white"}} expand = "lg">
       <Navbar.Brand href="#home" onClick={props.setView}>BestCo</Navbar.Brand>
@@ -29,7 +19,7 @@ const TopNav = (props) => {
           <Nav.Link href="#reviews" onClick={props.setView}>Reviews</Nav.Link>
           <Nav.Link href="#pricing" onClick={props.setView}>Pricing</Nav.Link>
         </Nav>
-        {isAuthenticated ? <Nav.Link>Hey, {getFirstname(user.name)}</Nav.Link>  : <LoginButton />  }
+        {isAuthenticated ? <Nav.Link>Hey, {user.given_name ? user.given_name : user.nickname} </Nav.Link>  : <LoginButton />  }
         {isAuthenticated ? <LogoutButton /> : "" }
       </Navbar.Collapse>
     </Navbar>
